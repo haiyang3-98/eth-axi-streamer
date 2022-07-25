@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'dropper'
+================================================================
+* Date:           Tue Jul 19 05:59:19 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        icmp_server_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu3p-ffvc1517-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.975 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.97>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %dataStreams_V_data_V_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %dataStreams_V_keep_V_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %dataStreams_V_last_V_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %packageBuffer1, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %packageBuffer1, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %packageBuffer1, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %validFifo, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %validFifo, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %validFifo, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %validFifo, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %packageBuffer1, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln323 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:323]   --->   Operation 14 'specpipeline' 'specpipeline_ln323' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i128P0A, i128 %packageBuffer1, i32 1" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 15 'nbreadreq' 'tmp_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.06> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 64> <FIFO>
+ST_1 : Operation 16 [1/1] (0.41ns)   --->   "%br_ln331 = br i1 %tmp_i, void %._crit_edge.i, void" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:331]   --->   Operation 16 'br' 'br_ln331' <Predicate = true> <Delay = 0.41>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%d_isFirstWord_load = load i1 %d_isFirstWord" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:332]   --->   Operation 17 'load' 'd_isFirstWord_load' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%d_drop_load = load i1 %d_drop" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:343]   --->   Operation 18 'load' 'd_drop_load' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln332 = br i1 %d_isFirstWord_load, void, void" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:332]   --->   Operation 19 'br' 'br_ln332' <Predicate = (tmp_i)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.06ns)   --->   "%packageBuffer1_read = read i128 @_ssdm_op_Read.ap_fifo.volatile.i128P0A, i128 %packageBuffer1" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 20 'read' 'packageBuffer1_read' <Predicate = (tmp_i & !d_isFirstWord_load)> <Delay = 1.06> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.06> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 64> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%currWord_last_V = bitselect i1 @_ssdm_op_BitSelect.i1.i128.i32, i128 %packageBuffer1_read, i32 72" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 21 'bitselect' 'currWord_last_V' <Predicate = (tmp_i & !d_isFirstWord_load)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln343 = br i1 %d_drop_load, void, void" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:343]   --->   Operation 22 'br' 'br_ln343' <Predicate = (tmp_i & !d_isFirstWord_load)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln174 = trunc i128 %packageBuffer1_read" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 23 'trunc' 'trunc_ln174' <Predicate = (tmp_i & !d_isFirstWord_load & !d_drop_load)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_12_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %packageBuffer1_read, i32 64, i32 71" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 24 'partselect' 'p_12_i' <Predicate = (tmp_i & !d_isFirstWord_load & !d_drop_load)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.41ns)   --->   "%br_ln349 = br i1 %currWord_last_V, void %._crit_edge.i, void %.thread.i" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:349]   --->   Operation 25 'br' 'br_ln349' <Predicate = (tmp_i & !d_isFirstWord_load & !d_drop_load)> <Delay = 0.41>
+ST_1 : Operation 26 [1/1] (0.41ns)   --->   "%br_ln349 = br i1 %currWord_last_V, void %._crit_edge.i, void %.thread.i" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:349]   --->   Operation 26 'br' 'br_ln349' <Predicate = (tmp_i & !d_isFirstWord_load & d_drop_load)> <Delay = 0.41>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_i_58 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i1P0A, i1 %validFifo, i32 1" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 27 'nbreadreq' 'tmp_i_58' <Predicate = (tmp_i & d_isFirstWord_load)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.31> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 8> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln333 = br i1 %tmp_i_58, void %.thread.i, void" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:333]   --->   Operation 28 'br' 'br_ln333' <Predicate = (tmp_i & d_isFirstWord_load)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (1.06ns)   --->   "%packageBuffer1_read_1 = read i128 @_ssdm_op_Read.ap_fifo.volatile.i128P0A, i128 %packageBuffer1" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 29 'read' 'packageBuffer1_read_1' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58)> <Delay = 1.06> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.06> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 64> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%currWord_last_V_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i128.i32, i128 %packageBuffer1_read_1, i32 72" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 30 'bitselect' 'currWord_last_V_1' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (1.16ns)   --->   "%d_valid = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %validFifo" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 31 'read' 'd_valid' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.31> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 8> <FIFO>
+ST_1 : Operation 32 [1/1] (0.38ns)   --->   "%br_ln336 = br i1 %d_valid, void, void" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:336]   --->   Operation 32 'br' 'br_ln336' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58)> <Delay = 0.38>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%trunc_ln174_1 = trunc i128 %packageBuffer1_read_1" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 33 'trunc' 'trunc_ln174_1' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58 & d_valid)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_1_i = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %packageBuffer1_read_1, i32 64, i32 71" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 34 'partselect' 'p_1_i' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58 & d_valid)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.38ns)   --->   "%br_ln337 = br void" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:337]   --->   Operation 35 'br' 'br_ln337' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58 & d_valid)> <Delay = 0.38>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%d_drop_flag_0_i = phi i1 0, void, i1 1, void"   --->   Operation 36 'phi' 'd_drop_flag_0_i' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.41ns)   --->   "%br_ln349 = br i1 %currWord_last_V_1, void %._crit_edge.i, void %.thread.i" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:349]   --->   Operation 37 'br' 'br_ln349' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58)> <Delay = 0.41>
+ST_1 : Operation 38 [1/1] (0.41ns)   --->   "%br_ln352 = br void %._crit_edge.i" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:352]   --->   Operation 38 'br' 'br_ln352' <Predicate = (tmp_i & d_isFirstWord_load & currWord_last_V_1) | (tmp_i & d_isFirstWord_load & !tmp_i_58) | (tmp_i & !d_isFirstWord_load & currWord_last_V)> <Delay = 0.41>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%d_isFirstWord_flag_0_i = phi i1 1, void %.thread.i, i1 1, void, i1 0, void, i1 0, void, i1 0, void %entry"   --->   Operation 39 'phi' 'd_isFirstWord_flag_0_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%d_isFirstWord_new_0_i = phi i1 1, void %.thread.i, i1 0, void, i1 0, void, i1 0, void, i1 0, void %entry"   --->   Operation 40 'phi' 'd_isFirstWord_new_0_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%d_drop_flag_1_i = phi i1 1, void %.thread.i, i1 %d_drop_flag_0_i, void, i1 0, void, i1 0, void, i1 0, void %entry"   --->   Operation 41 'phi' 'd_drop_flag_1_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%d_drop_new_1_i = phi i1 0, void %.thread.i, i1 1, void, i1 0, void, i1 0, void, i1 0, void %entry"   --->   Operation 42 'phi' 'd_drop_new_1_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %d_drop_flag_1_i, void %._crit_edge.new23.i, void %mergeST22.i"   --->   Operation 43 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%store_ln339 = store i1 %d_drop_new_1_i, i1 %d_drop" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:339]   --->   Operation 44 'store' 'store_ln339' <Predicate = (d_drop_flag_1_i)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln0 = br void %._crit_edge.new23.i"   --->   Operation 45 'br' 'br_ln0' <Predicate = (d_drop_flag_1_i)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %d_isFirstWord_flag_0_i, void %dropper.exit, void %mergeST.i"   --->   Operation 46 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%store_ln340 = store i1 %d_isFirstWord_new_0_i, i1 %d_isFirstWord" [/home/haiyang3/eth-axi-streamer/fpga-network-stack/hls/icmp_server/icmp_server.cpp:340]   --->   Operation 47 'store' 'store_ln340' <Predicate = (d_isFirstWord_flag_0_i)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln0 = br void %dropper.exit"   --->   Operation 48 'br' 'br_ln0' <Predicate = (d_isFirstWord_flag_0_i)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.16>
+ST_2 : Operation 49 [1/1] (1.16ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A.i8P0A.i1P0A, i64 %dataStreams_V_data_V_0, i8 %dataStreams_V_keep_V_0, i1 %dataStreams_V_last_V_0, i64 %trunc_ln174, i8 %p_12_i, i1 %currWord_last_V" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 49 'write' 'write_ln174' <Predicate = (tmp_i & !d_isFirstWord_load & !d_drop_load)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 16> <FIFO>
+ST_2 : Operation 50 [1/1] (1.16ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A.i8P0A.i1P0A, i64 %dataStreams_V_data_V_0, i8 %dataStreams_V_keep_V_0, i1 %dataStreams_V_last_V_0, i64 %trunc_ln174_1, i8 %p_1_i, i1 %currWord_last_V_1" [/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 50 'write' 'write_ln174' <Predicate = (tmp_i & d_isFirstWord_load & tmp_i_58 & d_valid)> <Delay = 1.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 16> <FIFO>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 51 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.2ns, clock uncertainty: 0.864ns.
+
+ <State 1>: 1.97ns
+The critical path consists of the following:
+	fifo read on port 'validFifo' (/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145) [48]  (1.17 ns)
+	multiplexor before 'phi' operation ('d_drop_flag_0_i') [56]  (0.387 ns)
+	'phi' operation ('d_drop_flag_0_i') [56]  (0 ns)
+	multiplexor before 'phi' operation ('d_drop_flag_1_i') [63]  (0.42 ns)
+	'phi' operation ('d_drop_flag_1_i') [63]  (0 ns)
+
+ <State 2>: 1.17ns
+The critical path consists of the following:
+	fifo write on port 'dataStreams_V_data_V_0' (/opt/xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174) [38]  (1.17 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

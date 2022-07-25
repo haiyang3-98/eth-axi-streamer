@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vitis HLS Report for 'insert_ethernet_header_512_s'
+================================================================
+* Date:           Tue Jul 19 06:04:40 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        mac_ip_encode_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu3p-ffvc1517-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  2.296 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     982|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      65|    -|
+|Register         |        -|     -|    1837|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1837|    1047|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1440|  2280|  788160|  394080|  320|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |ap_condition_195                  |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op20_read_state1     |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op29_read_state1     |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op53_read_state1     |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op67_write_state2    |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op72_write_state2    |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op77_write_state2    |       and|   0|  0|    2|           1|           1|
+    |grp_nbreadreq_fu_82_p3            |       and|   0|  0|    2|           1|           0|
+    |grp_nbreadreq_fu_96_p3            |       and|   0|  0|    2|           1|           0|
+    |p_Result_35_fu_223_p2             |       and|   0|  0|  112|         112|         112|
+    |p_Result_s_fu_313_p2              |       and|   0|  0|  112|         112|         112|
+    |icmp_ln674_1_fu_173_p2            |      icmp|   0|  0|   16|          25|           7|
+    |icmp_ln674_fu_263_p2              |      icmp|   0|  0|   16|          25|           7|
+    |icmp_ln82_fu_167_p2               |      icmp|   0|  0|   16|          25|           7|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|    2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|    2|           1|           1|
+    |currWord_data_V_fu_329_p3         |    select|   0|  0|  428|           1|         512|
+    |select_ln674_1_fu_297_p3          |    select|   0|  0|  108|           1|         112|
+    |select_ln674_2_fu_305_p3          |    select|   0|  0|   18|           1|          18|
+    |select_ln674_3_fu_195_p3          |    select|   0|  0|    2|           1|           1|
+    |select_ln674_4_fu_207_p3          |    select|   0|  0|  108|           1|         112|
+    |select_ln674_5_fu_215_p3          |    select|   0|  0|   18|           1|          18|
+    |select_ln674_fu_285_p3            |    select|   0|  0|    2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|    2|           1|           2|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |Total                             |          |   0|  0|  982|         319|        1031|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+------+-----------+
+    |           Name          | LUT| Input Size| Bits | Total Bits|
+    +-------------------------+----+-----------+------+-----------+
+    |ap_done                  |   9|          2|     1|          2|
+    |dataOut_internal_blk_n   |   9|          2|     1|          2|
+    |dataOut_internal_din     |  20|          4|  1024|       4096|
+    |dataStreamBuffer4_blk_n  |   9|          2|     1|          2|
+    |ge_state                 |   9|          2|     2|          4|
+    |headerFifo_blk_n         |   9|          2|     1|          2|
+    +-------------------------+----+-----------+------+-----------+
+    |Total                    |  65|         14|  1030|       4108|
+    +-------------------------+----+-----------+------+-----------+
+
+    * Register: 
+    +--------------------------------+------+----+------+-----------+
+    |              Name              |  FF  | LUT| Bits | Const Bits|
+    +--------------------------------+------+----+------+-----------+
+    |ap_CS_fsm                       |     1|   0|     1|          0|
+    |ap_done_reg                     |     1|   0|     1|          0|
+    |ap_enable_reg_pp0_iter1         |     1|   0|     1|          0|
+    |dataStreamBuffer4_read_reg_383  |  1024|   0|  1024|          0|
+    |ge_state                        |     2|   0|     2|          0|
+    |ge_state_load_reg_375           |     2|   0|     2|          0|
+    |icmp_ln82_reg_408               |     1|   0|     1|          0|
+    |p_Result_35_reg_413             |   112|   0|   112|          0|
+    |p_Result_s_reg_427              |   112|   0|   112|          0|
+    |tmp_2_reg_418                   |    65|   0|    65|          0|
+    |tmp_3_i_reg_379                 |     1|   0|     1|          0|
+    |tmp_4_i_reg_395                 |     1|   0|     1|          0|
+    |tmp_data_V_1_reg_399            |   512|   0|   512|          0|
+    |tmp_i_54_reg_391                |     1|   0|     1|          0|
+    |tmp_i_reg_423                   |     1|   0|     1|          0|
+    +--------------------------------+------+----+------+-----------+
+    |Total                           |  1837|   0|  1837|          0|
+    +--------------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+------+------------+-----------------------------+--------------+
+|         RTL Ports         | Dir | Bits |  Protocol  |        Source Object        |    C Type    |
++---------------------------+-----+------+------------+-----------------------------+--------------+
+|ap_clk                     |   in|     1|  ap_ctrl_hs|  insert_ethernet_header<512>|  return value|
+|ap_rst                     |   in|     1|  ap_ctrl_hs|  insert_ethernet_header<512>|  return value|
+|ap_start                   |   in|     1|  ap_ctrl_hs|  insert_ethernet_header<512>|  return value|
+|ap_done                    |  out|     1|  ap_ctrl_hs|  insert_ethernet_header<512>|  return value|
+|ap_continue                |   in|     1|  ap_ctrl_hs|  insert_ethernet_header<512>|  return value|
+|ap_idle                    |  out|     1|  ap_ctrl_hs|  insert_ethernet_header<512>|  return value|
+|ap_ready                   |  out|     1|  ap_ctrl_hs|  insert_ethernet_header<512>|  return value|
+|dataStreamBuffer4_dout     |   in|  1024|     ap_fifo|            dataStreamBuffer4|       pointer|
+|dataStreamBuffer4_empty_n  |   in|     1|     ap_fifo|            dataStreamBuffer4|       pointer|
+|dataStreamBuffer4_read     |  out|     1|     ap_fifo|            dataStreamBuffer4|       pointer|
+|headerFifo_dout            |   in|   256|     ap_fifo|                   headerFifo|       pointer|
+|headerFifo_empty_n         |   in|     1|     ap_fifo|                   headerFifo|       pointer|
+|headerFifo_read            |  out|     1|     ap_fifo|                   headerFifo|       pointer|
+|dataOut_internal_din       |  out|  1024|     ap_fifo|             dataOut_internal|       pointer|
+|dataOut_internal_full_n    |   in|     1|     ap_fifo|             dataOut_internal|       pointer|
+|dataOut_internal_write     |  out|     1|     ap_fifo|             dataOut_internal|       pointer|
++---------------------------+-----+------+------------+-----------------------------+--------------+
+

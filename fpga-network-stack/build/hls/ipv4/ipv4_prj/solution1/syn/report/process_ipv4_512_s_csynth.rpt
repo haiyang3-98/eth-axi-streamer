@@ -1,0 +1,195 @@
+
+
+================================================================
+== Vitis HLS Report for 'process_ipv4_512_s'
+================================================================
+* Date:           Tue Jul 19 06:02:58 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        ipv4_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu3p-ffvc1517-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.833 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        3|        3|  9.600 ns|  9.600 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|    1493|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     150|    -|
+|Register         |        -|     -|    1597|      32|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1597|    1675|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1440|  2280|  788160|  394080|  320|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |add_ln67_fu_342_p2                |         +|   0|  0|   23|          16|           1|
+    |and_ln414_1_fu_318_p2             |       and|   0|  0|  160|         160|         160|
+    |and_ln414_2_fu_324_p2             |       and|   0|  0|  160|         160|         160|
+    |and_ln414_fu_306_p2               |       and|   0|  0|  160|         160|         160|
+    |ap_block_state2_pp0_stage0_iter1  |       and|   0|  0|    2|           1|           1|
+    |ap_block_state3_io                |       and|   0|  0|    2|           1|           1|
+    |ap_block_state4_io                |       and|   0|  0|    2|           1|           1|
+    |ap_condition_114                  |       and|   0|  0|    2|           1|           1|
+    |ap_condition_186                  |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op69_write_state3    |       and|   0|  0|    2|           1|           1|
+    |ap_predicate_op76_write_state4    |       and|   0|  0|    2|           1|           1|
+    |tmp_i_nbreadreq_fu_96_p3          |       and|   0|  0|  160|           1|           0|
+    |icmp_ln414_fu_247_p2              |      icmp|   0|  0|   16|          25|           8|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|    2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|    2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter3  |        or|   0|  0|    2|           1|           1|
+    |or_ln63_1_fu_373_p2               |        or|   0|  0|    2|           1|           1|
+    |or_ln63_fu_353_p2                 |        or|   0|  0|    2|           1|           1|
+    |p_Result_s_fu_330_p2              |        or|   0|  0|  160|         160|         160|
+    |select_ln414_1_fu_282_p3          |    select|   0|  0|  148|           1|         160|
+    |select_ln414_2_fu_290_p3          |    select|   0|  0|  148|           1|         161|
+    |select_ln414_3_fu_298_p3          |    select|   0|  0|    2|           1|           1|
+    |select_ln414_fu_264_p3            |    select|   0|  0|  148|           1|         160|
+    |select_ln63_fu_365_p3             |    select|   0|  0|   16|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|    2|           1|           2|
+    |xor_ln414_fu_312_p2               |       xor|   0|  0|  160|           2|         160|
+    |xor_ln63_fu_359_p2                |       xor|   0|  0|    2|           1|           2|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |Total                             |          |   0|  0| 1493|         705|        1310|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                        | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                             |   9|          2|    1|          2|
+    |ap_phi_mux_header_idx_new_0_i_phi_fu_145_p4         |   9|          2|   16|         32|
+    |ap_phi_mux_header_idx_new_1_i_phi_fu_189_p4         |   9|          2|   16|         32|
+    |ap_phi_mux_header_ready_flag_0_i_phi_fu_134_p4      |  14|          3|    1|          3|
+    |ap_phi_mux_header_ready_flag_1_i_phi_fu_167_p4      |   9|          2|    1|          2|
+    |ap_phi_mux_header_ready_new_1_i_phi_fu_178_p4       |   9|          2|    1|          2|
+    |ap_phi_mux_metaWritten_flag_0_i_phi_fu_155_p4       |  14|          3|    1|          3|
+    |ap_phi_mux_metaWritten_flag_1_i_phi_fu_200_p4       |   9|          2|    1|          2|
+    |ap_phi_reg_pp0_iter1_header_ready_flag_1_i_reg_163  |   9|          2|    1|          2|
+    |ap_phi_reg_pp0_iter1_metaWritten_flag_1_i_reg_196   |   9|          2|    1|          2|
+    |ap_phi_reg_pp0_iter2_p_Val2_1_in_i_in_in_reg_207    |  14|          3|  160|        480|
+    |m_axis_rx_meta_V_TDATA_blk_n                        |   9|          2|    1|          2|
+    |rx_process2dropFifo_blk_n                           |   9|          2|    1|          2|
+    |rx_process2dropLengthFifo_blk_n                     |   9|          2|    1|          2|
+    |s_axis_rx_data_internal_blk_n                       |   9|          2|    1|          2|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                               | 150|         33|  204|        570|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------+------+----+------+-----------+
+    |                        Name                        |  FF  | LUT| Bits | Const Bits|
+    +----------------------------------------------------+------+----+------+-----------+
+    |ap_CS_fsm                                           |     1|   0|     1|          0|
+    |ap_done_reg                                         |     1|   0|     1|          0|
+    |ap_enable_reg_pp0_iter1                             |     1|   0|     1|          0|
+    |ap_enable_reg_pp0_iter2                             |     1|   0|     1|          0|
+    |ap_enable_reg_pp0_iter3                             |     1|   0|     1|          0|
+    |ap_phi_reg_pp0_iter1_header_ready_flag_1_i_reg_163  |     1|   0|     1|          0|
+    |ap_phi_reg_pp0_iter1_metaWritten_flag_1_i_reg_196   |     1|   0|     1|          0|
+    |ap_phi_reg_pp0_iter1_p_Val2_1_in_i_in_in_reg_207    |   160|   0|   160|          0|
+    |ap_phi_reg_pp0_iter2_p_Val2_1_in_i_in_in_reg_207    |   160|   0|   160|          0|
+    |currWord_last_V_reg_458                             |     1|   0|     1|          0|
+    |header_header_V                                     |   160|   0|   160|          0|
+    |header_idx                                          |    16|   0|    16|          0|
+    |header_ready                                        |     1|   0|     1|          0|
+    |metaWritten                                         |     1|   0|     1|          0|
+    |metaWritten_load_reg_479                            |     1|   0|     1|          0|
+    |metaWritten_load_reg_479_pp0_iter2_reg              |     1|   0|     1|          0|
+    |s_axis_rx_data_internal_read_reg_451                |  1024|   0|  1024|          0|
+    |tmp_i_reg_447                                       |     1|   0|     1|          0|
+    |tmp_i_reg_447                                       |    64|  32|     1|          0|
+    +----------------------------------------------------+------+----+------+-----------+
+    |Total                                               |  1597|  32|  1534|          0|
+    +----------------------------------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+------+------------+---------------------------+--------------+
+|             RTL Ports            | Dir | Bits |  Protocol  |       Source Object       |    C Type    |
++----------------------------------+-----+------+------------+---------------------------+--------------+
+|ap_clk                            |   in|     1|  ap_ctrl_hs|          process_ipv4<512>|  return value|
+|ap_rst                            |   in|     1|  ap_ctrl_hs|          process_ipv4<512>|  return value|
+|ap_start                          |   in|     1|  ap_ctrl_hs|          process_ipv4<512>|  return value|
+|ap_done                           |  out|     1|  ap_ctrl_hs|          process_ipv4<512>|  return value|
+|ap_continue                       |   in|     1|  ap_ctrl_hs|          process_ipv4<512>|  return value|
+|ap_idle                           |  out|     1|  ap_ctrl_hs|          process_ipv4<512>|  return value|
+|ap_ready                          |  out|     1|  ap_ctrl_hs|          process_ipv4<512>|  return value|
+|s_axis_rx_data_internal_dout      |   in|  1024|     ap_fifo|    s_axis_rx_data_internal|       pointer|
+|s_axis_rx_data_internal_empty_n   |   in|     1|     ap_fifo|    s_axis_rx_data_internal|       pointer|
+|s_axis_rx_data_internal_read      |  out|     1|     ap_fifo|    s_axis_rx_data_internal|       pointer|
+|rx_process2dropFifo_din           |  out|  1024|     ap_fifo|        rx_process2dropFifo|       pointer|
+|rx_process2dropFifo_full_n        |   in|     1|     ap_fifo|        rx_process2dropFifo|       pointer|
+|rx_process2dropFifo_write         |  out|     1|     ap_fifo|        rx_process2dropFifo|       pointer|
+|rx_process2dropLengthFifo_din     |  out|     4|     ap_fifo|  rx_process2dropLengthFifo|       pointer|
+|rx_process2dropLengthFifo_full_n  |   in|     1|     ap_fifo|  rx_process2dropLengthFifo|       pointer|
+|rx_process2dropLengthFifo_write   |  out|     1|     ap_fifo|  rx_process2dropLengthFifo|       pointer|
+|m_axis_rx_meta_V_TREADY           |   in|     1|        axis|           m_axis_rx_meta_V|       pointer|
+|m_axis_rx_meta_V_TDATA            |  out|    64|        axis|           m_axis_rx_meta_V|       pointer|
+|m_axis_rx_meta_V_TVALID           |  out|     1|        axis|           m_axis_rx_meta_V|       pointer|
++----------------------------------+-----+------+------------+---------------------------+--------------+
+

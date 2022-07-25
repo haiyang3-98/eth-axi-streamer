@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'ip_invalid_dropper_512_s'
+================================================================
+* Date:           Tue Jul 19 06:01:34 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        ip_handler_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu3p-ffvc1517-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.832 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      30|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      82|    -|
+|Register         |        -|     -|    1035|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1035|     112|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1440|  2280|  788160|  394080|  320|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |and_ln195_fu_126_p2               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_199                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op28_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op35_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op44_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op52_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op53_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op54_write_state2    |       and|   0|  0|   2|           1|           1|
+    |grp_nbreadreq_fu_50_p3            |       and|   0|  0|   2|           1|           0|
+    |tmp_6_i_nbreadreq_fu_72_p3        |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_64_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  30|          15|          13|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_done                   |   9|          2|    1|          2|
+    |iid_state                 |  14|          3|    2|          6|
+    |ipDataCheckFifo_blk_n     |   9|          2|    1|          2|
+    |ipDataDropFifo_blk_n      |   9|          2|    1|          2|
+    |ipv4ValidFifo_blk_n       |   9|          2|    1|          2|
+    |ipv4ValidFifo_din         |  14|          3|    1|          3|
+    |validChecksumFifo_blk_n   |   9|          2|    1|          2|
+    |validIpAddressFifo_blk_n  |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     |  82|         18|    9|         21|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+------+----+------+-----------+
+    |             Name             |  FF  | LUT| Bits | Const Bits|
+    +------------------------------+------+----+------+-----------+
+    |and_ln195_reg_174             |     1|   0|     1|          0|
+    |ap_CS_fsm                     |     1|   0|     1|          0|
+    |ap_done_reg                   |     1|   0|     1|          0|
+    |ap_enable_reg_pp0_iter1       |     1|   0|     1|          0|
+    |iid_state                     |     2|   0|     2|          0|
+    |iid_state_load_reg_144        |     2|   0|     2|          0|
+    |ipDataCheckFifo_read_reg_158  |  1024|   0|  1024|          0|
+    |tmp_4_i_reg_154               |     1|   0|     1|          0|
+    |tmp_6_i_reg_170               |     1|   0|     1|          0|
+    |tmp_i_reg_166                 |     1|   0|     1|          0|
+    +------------------------------+------+----+------+-----------+
+    |Total                         |  1035|   0|  1035|          0|
+    +------------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+------+------------+-------------------------+--------------+
+|          RTL Ports         | Dir | Bits |  Protocol  |      Source Object      |    C Type    |
++----------------------------+-----+------+------------+-------------------------+--------------+
+|ap_clk                      |   in|     1|  ap_ctrl_hs|  ip_invalid_dropper<512>|  return value|
+|ap_rst                      |   in|     1|  ap_ctrl_hs|  ip_invalid_dropper<512>|  return value|
+|ap_start                    |   in|     1|  ap_ctrl_hs|  ip_invalid_dropper<512>|  return value|
+|ap_done                     |  out|     1|  ap_ctrl_hs|  ip_invalid_dropper<512>|  return value|
+|ap_continue                 |   in|     1|  ap_ctrl_hs|  ip_invalid_dropper<512>|  return value|
+|ap_idle                     |  out|     1|  ap_ctrl_hs|  ip_invalid_dropper<512>|  return value|
+|ap_ready                    |  out|     1|  ap_ctrl_hs|  ip_invalid_dropper<512>|  return value|
+|ipDataCheckFifo_dout        |   in|  1024|     ap_fifo|          ipDataCheckFifo|       pointer|
+|ipDataCheckFifo_empty_n     |   in|     1|     ap_fifo|          ipDataCheckFifo|       pointer|
+|ipDataCheckFifo_read        |  out|     1|     ap_fifo|          ipDataCheckFifo|       pointer|
+|validChecksumFifo_dout      |   in|     1|     ap_fifo|        validChecksumFifo|       pointer|
+|validChecksumFifo_empty_n   |   in|     1|     ap_fifo|        validChecksumFifo|       pointer|
+|validChecksumFifo_read      |  out|     1|     ap_fifo|        validChecksumFifo|       pointer|
+|validIpAddressFifo_dout     |   in|     1|     ap_fifo|       validIpAddressFifo|       pointer|
+|validIpAddressFifo_empty_n  |   in|     1|     ap_fifo|       validIpAddressFifo|       pointer|
+|validIpAddressFifo_read     |  out|     1|     ap_fifo|       validIpAddressFifo|       pointer|
+|ipDataDropFifo_din          |  out|  1024|     ap_fifo|           ipDataDropFifo|       pointer|
+|ipDataDropFifo_full_n       |   in|     1|     ap_fifo|           ipDataDropFifo|       pointer|
+|ipDataDropFifo_write        |  out|     1|     ap_fifo|           ipDataDropFifo|       pointer|
+|ipv4ValidFifo_din           |  out|     1|     ap_fifo|            ipv4ValidFifo|       pointer|
+|ipv4ValidFifo_full_n        |   in|     1|     ap_fifo|            ipv4ValidFifo|       pointer|
+|ipv4ValidFifo_write         |  out|     1|     ap_fifo|            ipv4ValidFifo|       pointer|
++----------------------------+-----+------+------------+-------------------------+--------------+
+

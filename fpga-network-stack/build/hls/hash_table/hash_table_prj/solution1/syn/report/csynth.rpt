@@ -1,0 +1,26 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hash_table_top'
+================================================================
++ General Information: 
+    * Date:           Tue Jul 19 06:19:47 2022
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+    * Project:        hash_table_prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu3p-ffvc1517-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------+------+-------+---------+---------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |             Modules             | Issue|       | Latency | Latency | Iteration|         | Trip |          |         |    |            |            |     |
+    |             & Loops             | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
+    +---------------------------------+------+-------+---------+---------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |+ hash_table_top                 |     -|  -0.02|       82|  262.400|         -|       83|     -|        no|  36 (2%)|   -|  5776 (~0%)|  14216 (3%)|    -|
+    | + grp_calculate_hashes_fu_1634  |    II|  -0.58|        0|    0.000|         -|        1|     -|       yes|        -|   -|           -|   6310 (1%)|    -|
+    | o insertLoop                    |    II|  -2.34|       78|  249.600|         7|        6|    12|       yes|        -|   -|           -|           -|    -|
+    +---------------------------------+------+-------+---------+---------+----------+---------+------+----------+---------+----+------------+------------+-----+
+

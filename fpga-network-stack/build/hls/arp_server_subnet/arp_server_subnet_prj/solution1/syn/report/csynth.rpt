@@ -1,0 +1,31 @@
+
+
+================================================================
+== Synthesis Summary Report of 'arp_server_subnet_top'
+================================================================
++ General Information: 
+    * Date:           Wed Jul 20 00:54:11 2022
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+    * Project:        arp_server_subnet_prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu3p-ffvc1517-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |                      Modules                      |  Issue |       | Latency | Latency| Iteration|         | Trip |          |         |    |            |            |     |
+    |                      & Loops                      |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
+    +---------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |+ arp_server_subnet_top*                           |  Timing|   0.45|        7|  44.800|         -|        1|     -|  dataflow|  3 (~0%)|   -|  2513 (~0%)|  22032 (5%)|    -|
+    | + grp_generate_arp_pkg_64_s_fu_180                |  Timing|   0.45|        1|   6.400|         -|        1|     -|       yes|        -|   -|   493 (~0%)|  14158 (3%)|    -|
+    | + grp_process_arp_pkg_64_s_fu_200                 |       -|  -0.10|        2|  12.800|         -|        1|     -|       yes|        -|   -|   906 (~0%)|   6760 (1%)|    -|
+    | + grp_arp_table_fu_226                            |       -|  -2.48|        2|  12.800|         -|        1|     -|       yes|  3 (~0%)|   -|   140 (~0%)|   161 (~0%)|    -|
+    | + grp_convert_axis_to_net_axis_64_s_fu_246        |       -|  -3.27|        1|   6.400|         -|        1|     -|       yes|        -|   -|    77 (~0%)|    37 (~0%)|    -|
+    | + grp_convert_net_axis_to_axis_64_s_fu_260        |       -|  -3.27|        2|  12.800|         -|        1|     -|       yes|        -|   -|    79 (~0%)|    43 (~0%)|    -|
+    | + call_ln222_arp_server_subnet_top_entry3_fu_274  |       -|  -3.26|        0|   0.000|         -|        0|     -|        no|        -|   -|     2 (~0%)|    29 (~0%)|    -|
+    | + call_ln221_arp_server_subnet_top_entry7_fu_284  |       -|  -1.81|        0|   0.000|         -|        0|     -|        no|        -|   -|     2 (~0%)|    47 (~0%)|    -|
+    +---------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+

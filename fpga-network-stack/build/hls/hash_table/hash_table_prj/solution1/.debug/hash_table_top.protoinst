@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"hash_table_top": {
+			"proto_instances": {
+			}
+		}
+	}
+}

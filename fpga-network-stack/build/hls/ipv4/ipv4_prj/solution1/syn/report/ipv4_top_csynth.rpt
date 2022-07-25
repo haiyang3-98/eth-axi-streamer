@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'ipv4_top'
+================================================================
+* Date:           Tue Jul 19 06:03:00 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        ipv4_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu3p-ffvc1517-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  3.114 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        6|        6|  19.200 ns|  19.200 ns|    1|    1|  dataflow|
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                     |                                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |               Instance              |               Module               |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |ipv4_generate_ipv4_512_U0            |ipv4_generate_ipv4_512_s            |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |ipv4_drop_optional_ip_header_512_U0  |ipv4_drop_optional_ip_header_512_s  |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |process_ipv4_512_U0                  |process_ipv4_512_s                  |        3|        3|  9.600 ns|  9.600 ns|    1|    1|      yes|
+        |ipv4_lshiftWordByOctet_512_2_U0      |ipv4_lshiftWordByOctet_512_2_s      |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |convert_axis_to_net_axis_512_4_U0    |convert_axis_to_net_axis_512_4      |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |convert_axis_to_net_axis_512_U0      |convert_axis_to_net_axis_512_s      |        1|        1|  3.200 ns|  3.200 ns|    1|    1|      yes|
+        |convert_net_axis_to_axis_512_5_U0    |convert_net_axis_to_axis_512_5      |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+        |convert_net_axis_to_axis_512_U0      |convert_net_axis_to_axis_512_s      |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+        |ipv4_top_entry3_U0                   |ipv4_top_entry3                     |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+        |ipv4_top_entry6_U0                   |ipv4_top_entry6                     |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+        +-------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       -|       -|    -|
+|FIFO             |        0|     -|   14522|    7508|    -|
+|Instance         |        -|     -|   11339|    2943|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|       -|    -|
+|Register         |        -|     -|       -|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|   25861|   10451|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1440|  2280|  788160|  394080|  320|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|       3|       2|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------+------------------------------------+---------+----+------+------+-----+
+    |               Instance              |               Module               | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------------+------------------------------------+---------+----+------+------+-----+
+    |convert_axis_to_net_axis_512_4_U0    |convert_axis_to_net_axis_512_4      |        0|   0|   581|    37|    0|
+    |convert_axis_to_net_axis_512_U0      |convert_axis_to_net_axis_512_s      |        0|   0|   581|    37|    0|
+    |convert_net_axis_to_axis_512_5_U0    |convert_net_axis_to_axis_512_5      |        0|   0|   583|    43|    0|
+    |convert_net_axis_to_axis_512_U0      |convert_net_axis_to_axis_512_s      |        0|   0|   583|    43|    0|
+    |ipv4_drop_optional_ip_header_512_U0  |ipv4_drop_optional_ip_header_512_s  |        0|   0|  3950|   193|    0|
+    |ipv4_generate_ipv4_512_U0            |ipv4_generate_ipv4_512_s            |        0|   0|  2298|   232|    0|
+    |ipv4_lshiftWordByOctet_512_2_U0      |ipv4_lshiftWordByOctet_512_2_s      |        0|   0|  1162|   607|    0|
+    |ipv4_top_entry3_U0                   |ipv4_top_entry3                     |        0|   0|     2|    29|    0|
+    |ipv4_top_entry6_U0                   |ipv4_top_entry6                     |        0|   0|     2|    47|    0|
+    |process_ipv4_512_U0                  |process_ipv4_512_s                  |        0|   0|  1597|  1675|    0|
+    +-------------------------------------+------------------------------------+---------+----+------+------+-----+
+    |Total                                |                                    |        0|   0| 11339|  2943|    0|
+    +-------------------------------------+------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-----------------------------+---------+------+----+-----+------+------+---------+
+    |             Name            | BRAM_18K|  FF  | LUT| URAM| Depth| Bits | Size:D*B|
+    +-----------------------------+---------+------+----+-----+------+------+---------+
+    |local_ipv4_address_c1_U      |        0|    68|   0|    -|     2|    32|       64|
+    |local_ipv4_address_c_U       |        0|     5|   0|    -|     4|    32|      128|
+    |m_axis_rx_data_internal_U    |        0|  2058|   0|    -|     2|  1024|     2048|
+    |m_axis_tx_data_internal_U    |        0|  2058|   0|    -|     2|  1024|     2048|
+    |protocol_c2_U                |        0|    20|   0|    -|     2|     8|       16|
+    |protocol_c_U                 |        0|     5|   0|    -|     4|     8|       32|
+    |rx_process2dropFifo_U        |        0|  3090|   0|    -|     8|  1024|     8192|
+    |rx_process2dropLengthFifo_U  |        0|    12|   0|    -|     2|     4|        8|
+    |s_axis_rx_data_internal_U    |        0|  2058|   0|    -|     2|  1024|     2048|
+    |s_axis_tx_data_internal_U    |        0|  2058|   0|    -|     2|  1024|     2048|
+    |tx_shift2ipv4Fifo_U          |        0|  3090|   0|    -|     8|  1024|     8192|
+    +-----------------------------+---------+------+----+-----+------+------+---------+
+    |Total                        |        0| 14522|   0|    0|    38|  6228|    24824|
+    +-----------------------------+---------+------+----+-----+------+------+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+--------------+-------------------------+--------------+
+|        RTL Ports        | Dir | Bits|   Protocol   |      Source Object      |    C Type    |
++-------------------------+-----+-----+--------------+-------------------------+--------------+
+|s_axis_rx_data_TDATA     |   in|  512|          axis|  s_axis_rx_data_V_data_V|       pointer|
+|s_axis_rx_data_TKEEP     |   in|   64|          axis|  s_axis_rx_data_V_keep_V|       pointer|
+|s_axis_rx_data_TSTRB     |   in|   64|          axis|  s_axis_rx_data_V_strb_V|       pointer|
+|s_axis_rx_data_TLAST     |   in|    1|          axis|  s_axis_rx_data_V_last_V|       pointer|
+|s_axis_rx_data_TVALID    |   in|    1|          axis|  s_axis_rx_data_V_last_V|       pointer|
+|s_axis_rx_data_TREADY    |  out|    1|          axis|  s_axis_rx_data_V_last_V|       pointer|
+|m_axis_rx_meta_V_TDATA   |  out|   64|          axis|         m_axis_rx_meta_V|       pointer|
+|m_axis_rx_meta_V_TVALID  |  out|    1|          axis|         m_axis_rx_meta_V|       pointer|
+|m_axis_rx_meta_V_TREADY  |   in|    1|          axis|         m_axis_rx_meta_V|       pointer|
+|m_axis_rx_data_TDATA     |  out|  512|          axis|  m_axis_rx_data_V_data_V|       pointer|
+|m_axis_rx_data_TKEEP     |  out|   64|          axis|  m_axis_rx_data_V_keep_V|       pointer|
+|m_axis_rx_data_TSTRB     |  out|   64|          axis|  m_axis_rx_data_V_strb_V|       pointer|
+|m_axis_rx_data_TLAST     |  out|    1|          axis|  m_axis_rx_data_V_last_V|       pointer|
+|m_axis_rx_data_TVALID    |  out|    1|          axis|  m_axis_rx_data_V_last_V|       pointer|
+|m_axis_rx_data_TREADY    |   in|    1|          axis|  m_axis_rx_data_V_last_V|       pointer|
+|s_axis_tx_meta_V_TDATA   |   in|   64|          axis|         s_axis_tx_meta_V|       pointer|
+|s_axis_tx_meta_V_TVALID  |   in|    1|          axis|         s_axis_tx_meta_V|       pointer|
+|s_axis_tx_meta_V_TREADY  |  out|    1|          axis|         s_axis_tx_meta_V|       pointer|
+|s_axis_tx_data_TDATA     |   in|  512|          axis|  s_axis_tx_data_V_data_V|       pointer|
+|s_axis_tx_data_TKEEP     |   in|   64|          axis|  s_axis_tx_data_V_keep_V|       pointer|
+|s_axis_tx_data_TSTRB     |   in|   64|          axis|  s_axis_tx_data_V_strb_V|       pointer|
+|s_axis_tx_data_TLAST     |   in|    1|          axis|  s_axis_tx_data_V_last_V|       pointer|
+|s_axis_tx_data_TVALID    |   in|    1|          axis|  s_axis_tx_data_V_last_V|       pointer|
+|s_axis_tx_data_TREADY    |  out|    1|          axis|  s_axis_tx_data_V_last_V|       pointer|
+|m_axis_tx_data_TDATA     |  out|  512|          axis|  m_axis_tx_data_V_data_V|       pointer|
+|m_axis_tx_data_TKEEP     |  out|   64|          axis|  m_axis_tx_data_V_keep_V|       pointer|
+|m_axis_tx_data_TSTRB     |  out|   64|          axis|  m_axis_tx_data_V_strb_V|       pointer|
+|m_axis_tx_data_TLAST     |  out|    1|          axis|  m_axis_tx_data_V_last_V|       pointer|
+|m_axis_tx_data_TVALID    |  out|    1|          axis|  m_axis_tx_data_V_last_V|       pointer|
+|m_axis_tx_data_TREADY    |   in|    1|          axis|  m_axis_tx_data_V_last_V|       pointer|
+|local_ipv4_address       |   in|   32|       ap_none|       local_ipv4_address|        scalar|
+|protocol                 |   in|    8|       ap_none|                 protocol|        scalar|
+|ap_clk                   |   in|    1|  ap_ctrl_none|                 ipv4_top|  return value|
+|ap_rst_n                 |   in|    1|  ap_ctrl_none|                 ipv4_top|  return value|
++-------------------------+-----+-----+--------------+-------------------------+--------------+
+

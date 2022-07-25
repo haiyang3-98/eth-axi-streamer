@@ -1,0 +1,252 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'retransmit_timer'" level="0">
+<item name = "Date">Tue Jul 19 06:14:03 2022
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">toe_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu3p-ffvc1517-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.20 ns, 3.271 ns, 0.86 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4, 4, 13.086 ns, 13.086 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 298, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">6, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 315, -</column>
+<column name="Register">-, -, 836, 160, -</column>
+<specialColumn name="Available">1440, 2280, 788160, 394080, 320</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="retransmitTimerTable_active_U">retransmit_timer_retransmitTimerTable_active, 1, 0, 0, 0, 1000, 1, 1, 1000</column>
+<column name="retransmitTimerTable_retries_V_U">retransmit_timer_retransmitTimerTable_retries_V, 1, 0, 0, 0, 1000, 3, 1, 3000</column>
+<column name="retransmitTimerTable_time_V_U">retransmit_timer_retransmitTimerTable_time_V, 2, 0, 0, 0, 1000, 32, 1, 32000</column>
+<column name="retransmitTimerTable_type_U">retransmit_timer_retransmitTimerTable_type, 2, 0, 0, 0, 1000, 32, 1, 32000</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln691_157_fu_646_p2">+, 0, 0, 23, 16, 3</column>
+<column name="add_ln691_fu_556_p2">+, 0, 0, 23, 16, 1</column>
+<column name="add_ln882_fu_562_p2">+, 0, 0, 17, 10, 1</column>
+<column name="currEntry_retries_V_1_fu_697_p2">+, 0, 0, 10, 3, 1</column>
+<column name="currEntry_time_V_1_fu_684_p2">+, 0, 0, 39, 32, 2</column>
+<column name="ret_fu_612_p2">+, 0, 0, 24, 17, 3</column>
+<column name="ap_block_pp0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state4_pp0_stage0_iter3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_203">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_544">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_547">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_550">and, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_state2_pp0_iter1_stage0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_state3_pp0_iter2_stage0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_state4_pp0_iter3_stage0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op42_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op84_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op91_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="grp_nbreadreq_fu_128_p3">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_i_269_nbreadreq_fu_142_p3">and, 0, 0, 2, 1, 0</column>
+<column name="icmp_ln108_fu_622_p2">icmp, 0, 0, 13, 17, 17</column>
+<column name="icmp_ln175_fu_719_p2">icmp, 0, 0, 20, 32, 2</column>
+<column name="icmp_ln874_fu_535_p2">icmp, 0, 0, 13, 16, 16</column>
+<column name="icmp_ln882_fu_568_p2">icmp, 0, 0, 13, 16, 10</column>
+<column name="icmp_ln886_fu_678_p2">icmp, 0, 0, 20, 32, 1</column>
+<column name="icmp_ln890_fu_634_p2">icmp, 0, 0, 13, 16, 16</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state5_pp0_stage0_iter4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_325">or, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_392">or, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_399">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op105_load_state3">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op127_write_state4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op137_store_state4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op142_write_state5">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op146_write_state5">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op147_write_state5">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op66_read_state1">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln108_fu_640_p2">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln117_fu_574_p3">select, 0, 0, 10, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln108_fu_628_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="ap_phi_mux_currEntry_active_1_phi_fu_374_p24">14, 3, 1, 3</column>
+<column name="ap_phi_mux_currEntry_retries_V_2_phi_fu_416_p24">20, 4, 3, 12</column>
+<column name="ap_phi_mux_currEntry_time_V_2_phi_fu_453_p24">14, 3, 32, 96</column>
+<column name="ap_phi_mux_currEntry_type_2_phi_fu_335_p24">14, 3, 32, 96</column>
+<column name="ap_phi_mux_currID_V_2_phi_fu_292_p6">14, 3, 16, 48</column>
+<column name="ap_phi_reg_pp0_iter1_phi_ln126_reg_301">14, 3, 1, 3</column>
+<column name="ap_phi_reg_pp0_iter1_set_type_2_reg_318">9, 2, 32, 64</column>
+<column name="ap_phi_reg_pp0_iter3_currEntry_active_1_reg_369">14, 3, 1, 3</column>
+<column name="ap_phi_reg_pp0_iter3_currEntry_retries_V_2_reg_413">9, 2, 3, 6</column>
+<column name="ap_phi_reg_pp0_iter3_currEntry_time_V_2_reg_445">37, 7, 32, 224</column>
+<column name="ap_phi_reg_pp0_iter3_currEntry_type_2_reg_332">14, 3, 32, 96</column>
+<column name="currID_V_2_reg_288">14, 3, 16, 48</column>
+<column name="retransmitTimerTable_active_address1">14, 3, 10, 30</column>
+<column name="retransmitTimerTable_retries_V_address1">14, 3, 10, 30</column>
+<column name="retransmitTimerTable_time_V_address1">14, 3, 10, 30</column>
+<column name="retransmitTimerTable_time_V_d1">14, 3, 32, 96</column>
+<column name="rtTimer2eventEng_setEvent_blk_n">9, 2, 1, 2</column>
+<column name="rtTimer2stateTable_releaseState_blk_n">9, 2, 1, 2</column>
+<column name="rt_position_V">9, 2, 16, 32</column>
+<column name="rxEng2timer_clearRetransmitTimer_blk_n">9, 2, 1, 2</column>
+<column name="timer2rxApp_notification_blk_n">9, 2, 1, 2</column>
+<column name="timer2txApp_notification_blk_n">9, 2, 1, 2</column>
+<column name="txEng2timer_setRetransmitTimer_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_currEntry_active_1_reg_369">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_currEntry_retries_V_2_reg_413">3, 0, 3, 0</column>
+<column name="ap_phi_reg_pp0_iter1_currEntry_time_V_2_reg_445">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_currEntry_type_2_reg_332">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_phi_ln126_reg_301">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_set_type_2_reg_318">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_currEntry_active_1_reg_369">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter2_currEntry_retries_V_2_reg_413">3, 0, 3, 0</column>
+<column name="ap_phi_reg_pp0_iter2_currEntry_time_V_2_reg_445">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_currEntry_type_2_reg_332">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_set_type_2_reg_318">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter3_currEntry_active_1_reg_369">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter3_currEntry_retries_V_2_reg_413">3, 0, 3, 0</column>
+<column name="ap_phi_reg_pp0_iter3_currEntry_time_V_2_reg_445">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter3_currEntry_type_2_reg_332">32, 0, 32, 0</column>
+<column name="currEntry_active_reg_820">1, 0, 1, 0</column>
+<column name="currEntry_active_reg_820_pp0_iter3_reg">1, 0, 1, 0</column>
+<column name="currEntry_retries_V_reg_805">3, 0, 3, 0</column>
+<column name="currEntry_time_V_1_reg_839">32, 0, 32, 0</column>
+<column name="currEntry_type_reg_824">32, 0, 32, 0</column>
+<column name="currID_V_2_reg_288">16, 0, 16, 0</column>
+<column name="icmp_ln175_reg_852">1, 0, 1, 0</column>
+<column name="icmp_ln874_reg_759">1, 0, 1, 0</column>
+<column name="icmp_ln886_reg_835">1, 0, 1, 0</column>
+<column name="icmp_ln886_reg_835_pp0_iter3_reg">1, 0, 1, 0</column>
+<column name="phi_ln126_reg_301">1, 0, 1, 0</column>
+<column name="retransmitTimerTable_active_addr_1_reg_787">10, 0, 10, 0</column>
+<column name="retransmitTimerTable_active_addr_1_reg_787_pp0_iter2_reg">10, 0, 10, 0</column>
+<column name="retransmitTimerTable_retries_V_addr_1_reg_781">10, 0, 10, 0</column>
+<column name="retransmitTimerTable_retries_V_addr_1_reg_781_pp0_iter2_reg">10, 0, 10, 0</column>
+<column name="retransmitTimerTable_time_V_addr_1_reg_775">10, 0, 10, 0</column>
+<column name="retransmitTimerTable_time_V_addr_1_reg_775_pp0_iter2_reg">10, 0, 10, 0</column>
+<column name="retransmitTimerTable_type_addr_reg_793">10, 0, 10, 0</column>
+<column name="retransmitTimerTable_type_addr_reg_793_pp0_iter2_reg">10, 0, 10, 0</column>
+<column name="rt_position_V">16, 0, 16, 0</column>
+<column name="rt_prevPosition_V">16, 0, 16, 0</column>
+<column name="rt_update_sessionID_V">16, 0, 16, 0</column>
+<column name="rt_update_sessionID_V_load_reg_746">16, 0, 16, 0</column>
+<column name="rt_update_stop">1, 0, 1, 0</column>
+<column name="rt_update_stop_load_reg_751">1, 0, 1, 0</column>
+<column name="rt_waitForWrite">1, 0, 1, 0</column>
+<column name="rt_waitForWrite_load_reg_742">1, 0, 1, 0</column>
+<column name="tmp_16_i_reg_844">1, 0, 1, 0</column>
+<column name="tmp_254_reg_848">1, 0, 1, 0</column>
+<column name="tmp_i_reg_755">1, 0, 1, 0</column>
+<column name="currID_V_2_reg_288">64, 32, 16, 0</column>
+<column name="icmp_ln874_reg_759">64, 32, 1, 0</column>
+<column name="phi_ln126_reg_301">64, 32, 1, 0</column>
+<column name="rt_waitForWrite_load_reg_742">64, 32, 1, 0</column>
+<column name="tmp_i_reg_755">64, 32, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, retransmit_timer, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, retransmit_timer, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, retransmit_timer, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, retransmit_timer, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, retransmit_timer, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, retransmit_timer, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, retransmit_timer, return value</column>
+<column name="rxEng2timer_clearRetransmitTimer_dout">in, 32, ap_fifo, rxEng2timer_clearRetransmitTimer, pointer</column>
+<column name="rxEng2timer_clearRetransmitTimer_empty_n">in, 1, ap_fifo, rxEng2timer_clearRetransmitTimer, pointer</column>
+<column name="rxEng2timer_clearRetransmitTimer_read">out, 1, ap_fifo, rxEng2timer_clearRetransmitTimer, pointer</column>
+<column name="txEng2timer_setRetransmitTimer_dout">in, 64, ap_fifo, txEng2timer_setRetransmitTimer, pointer</column>
+<column name="txEng2timer_setRetransmitTimer_empty_n">in, 1, ap_fifo, txEng2timer_setRetransmitTimer, pointer</column>
+<column name="txEng2timer_setRetransmitTimer_read">out, 1, ap_fifo, txEng2timer_setRetransmitTimer, pointer</column>
+<column name="rtTimer2eventEng_setEvent_din">out, 128, ap_fifo, rtTimer2eventEng_setEvent, pointer</column>
+<column name="rtTimer2eventEng_setEvent_full_n">in, 1, ap_fifo, rtTimer2eventEng_setEvent, pointer</column>
+<column name="rtTimer2eventEng_setEvent_write">out, 1, ap_fifo, rtTimer2eventEng_setEvent, pointer</column>
+<column name="rtTimer2stateTable_releaseState_din">out, 16, ap_fifo, rtTimer2stateTable_releaseState, pointer</column>
+<column name="rtTimer2stateTable_releaseState_full_n">in, 1, ap_fifo, rtTimer2stateTable_releaseState, pointer</column>
+<column name="rtTimer2stateTable_releaseState_write">out, 1, ap_fifo, rtTimer2stateTable_releaseState, pointer</column>
+<column name="timer2rxApp_notification_din">out, 96, ap_fifo, timer2rxApp_notification, pointer</column>
+<column name="timer2rxApp_notification_full_n">in, 1, ap_fifo, timer2rxApp_notification, pointer</column>
+<column name="timer2rxApp_notification_write">out, 1, ap_fifo, timer2rxApp_notification, pointer</column>
+<column name="timer2txApp_notification_din">out, 96, ap_fifo, timer2txApp_notification, pointer</column>
+<column name="timer2txApp_notification_full_n">in, 1, ap_fifo, timer2txApp_notification, pointer</column>
+<column name="timer2txApp_notification_write">out, 1, ap_fifo, timer2txApp_notification, pointer</column>
+</table>
+</item>
+</section>
+</profile>

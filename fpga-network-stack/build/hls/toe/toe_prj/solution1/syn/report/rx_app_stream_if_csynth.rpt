@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vitis HLS Report for 'rx_app_stream_if'
+================================================================
+* Date:           Tue Jul 19 06:14:49 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        toe_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu3p-ffvc1517-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.965 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     296|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      68|    -|
+|Register         |        -|     -|     154|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     154|     364|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1440|  2280|  788160|  394080|  320|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln208_fu_220_p2               |         +|   0|  0|  25|          18|          18|
+    |ap_block_state2_io                |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_io                |       and|   0|  0|   2|           1|           1|
+    |ap_condition_134                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_193                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_216                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op23_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op32_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op40_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op42_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op50_write_state3    |       and|   0|  0|   2|           1|           1|
+    |tmp_i_251_nbreadreq_fu_92_p3      |       and|   0|  0|  65|           1|           0|
+    |tmp_i_nbreadreq_fu_78_p3          |       and|   0|  0|  65|           1|           0|
+    |icmp_ln874_fu_146_p2              |      icmp|   0|  0|  13|          16|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|   2|           1|           1|
+    |or_ln174_fu_236_p2                |        or|   0|  0|  96|          96|          65|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 296|         148|         101|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |ap_done                                    |   9|          2|    1|          2|
+    |m_axis_rx_data_rsp_metadata_V_TDATA_blk_n  |   9|          2|    1|          2|
+    |rxApp2rxSar_upd_req_blk_n                  |   9|          2|    1|          2|
+    |rxApp2rxSar_upd_req_din                    |  14|          3|   96|        288|
+    |rxBufferReadCmd_blk_n                      |   9|          2|    1|          2|
+    |rxSar2rxApp_upd_rsp_blk_n                  |   9|          2|    1|          2|
+    |s_axis_rx_data_req_V_TDATA_blk_n           |   9|          2|    1|          2|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      |  68|         15|  102|        300|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+----+----+-----+-----------+
+    |                    Name                    | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                   |   1|   0|    1|          0|
+    |ap_done_reg                                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                     |   1|   0|    1|          0|
+    |icmp_ln874_reg_256                          |   1|   0|    1|          0|
+    |rasi_fsmState_V                             |   1|   0|    1|          0|
+    |rasi_fsmState_V_load_reg_243                |   1|   0|    1|          0|
+    |rasi_fsmState_V_load_reg_243_pp0_iter1_reg  |   1|   0|    1|          0|
+    |rasi_readLength_V                           |  16|   0|   16|          0|
+    |tmp_appd_V_reg_274                          |  18|   0|   18|          0|
+    |tmp_i_251_reg_260                           |   1|   0|    1|          0|
+    |tmp_i_251_reg_260_pp0_iter1_reg             |   1|   0|    1|          0|
+    |tmp_i_reg_247                               |   1|   0|    1|          0|
+    |tmp_reg_279                                 |  31|   0|   31|          0|
+    |tmp_s_reg_284                               |  14|   0|   14|          0|
+    |trunc_ln145_7_reg_269                       |  16|   0|   16|          0|
+    |trunc_ln145_8_reg_251                       |  16|   0|   16|          0|
+    |trunc_ln145_reg_264                         |  32|   0|   32|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+    |Total                                       | 154|   0|  154|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+-----+------------+-------------------------------+--------------+
+|               RTL Ports              | Dir | Bits|  Protocol  |         Source Object         |    C Type    |
++--------------------------------------+-----+-----+------------+-------------------------------+--------------+
+|ap_clk                                |   in|    1|  ap_ctrl_hs|               rx_app_stream_if|  return value|
+|ap_rst                                |   in|    1|  ap_ctrl_hs|               rx_app_stream_if|  return value|
+|ap_start                              |   in|    1|  ap_ctrl_hs|               rx_app_stream_if|  return value|
+|ap_done                               |  out|    1|  ap_ctrl_hs|               rx_app_stream_if|  return value|
+|ap_continue                           |   in|    1|  ap_ctrl_hs|               rx_app_stream_if|  return value|
+|ap_idle                               |  out|    1|  ap_ctrl_hs|               rx_app_stream_if|  return value|
+|ap_ready                              |  out|    1|  ap_ctrl_hs|               rx_app_stream_if|  return value|
+|s_axis_rx_data_req_V_TVALID           |   in|    1|        axis|           s_axis_rx_data_req_V|       pointer|
+|s_axis_rx_data_req_V_TDATA            |   in|   32|        axis|           s_axis_rx_data_req_V|       pointer|
+|s_axis_rx_data_req_V_TREADY           |  out|    1|        axis|           s_axis_rx_data_req_V|       pointer|
+|rxSar2rxApp_upd_rsp_dout              |   in|   96|     ap_fifo|            rxSar2rxApp_upd_rsp|       pointer|
+|rxSar2rxApp_upd_rsp_empty_n           |   in|    1|     ap_fifo|            rxSar2rxApp_upd_rsp|       pointer|
+|rxSar2rxApp_upd_rsp_read              |  out|    1|     ap_fifo|            rxSar2rxApp_upd_rsp|       pointer|
+|rxApp2rxSar_upd_req_din               |  out|   96|     ap_fifo|            rxApp2rxSar_upd_req|       pointer|
+|rxApp2rxSar_upd_req_full_n            |   in|    1|     ap_fifo|            rxApp2rxSar_upd_req|       pointer|
+|rxApp2rxSar_upd_req_write             |  out|    1|     ap_fifo|            rxApp2rxSar_upd_req|       pointer|
+|m_axis_rx_data_rsp_metadata_V_TREADY  |   in|    1|        axis|  m_axis_rx_data_rsp_metadata_V|       pointer|
+|m_axis_rx_data_rsp_metadata_V_TDATA   |  out|   16|        axis|  m_axis_rx_data_rsp_metadata_V|       pointer|
+|m_axis_rx_data_rsp_metadata_V_TVALID  |  out|    1|        axis|  m_axis_rx_data_rsp_metadata_V|       pointer|
+|rxBufferReadCmd_din                   |  out|    1|     ap_fifo|                rxBufferReadCmd|       pointer|
+|rxBufferReadCmd_full_n                |   in|    1|     ap_fifo|                rxBufferReadCmd|       pointer|
+|rxBufferReadCmd_write                 |  out|    1|     ap_fifo|                rxBufferReadCmd|       pointer|
++--------------------------------------+-----+-----+------------+-------------------------------+--------------+
+

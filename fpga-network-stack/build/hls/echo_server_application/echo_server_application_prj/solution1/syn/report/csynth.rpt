@@ -1,0 +1,29 @@
+
+
+================================================================
+== Synthesis Summary Report of 'echo_server_application'
+================================================================
++ General Information: 
+    * Date:           Tue Jul 19 22:46:46 2022
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+    * Project:        echo_server_application_prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu3p-ffvc1517-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------+------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |               Modules              | Issue|       | Latency | Latency| Iteration|         | Trip |          |         |    |            |            |     |
+    |               & Loops              | Type | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
+    +------------------------------------+------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    |+ echo_server_application*          |     -|  -2.81|        2|  12.800|         -|        2|     -|  dataflow|  29 (2%)|   -|  3251 (~0%)|  1573 (~0%)|    -|
+    | + grp_client_fu_90                 |    II|  -2.81|        2|  12.800|         -|        2|     -|       yes|        -|   -|    12 (~0%)|   120 (~0%)|    -|
+    | + grp_server_fu_106                |     -|  -3.26|        1|   6.400|         -|        1|     -|       yes|        -|   -|  1047 (~0%)|    69 (~0%)|    -|
+    | + grp_notification_handler_fu_120  |     -|  -3.26|        2|  12.800|         -|        1|     -|       yes|        -|   -|    56 (~0%)|    71 (~0%)|    -|
+    | + grp_dummy_fu_130                 |     -|  -4.09|        2|  12.800|         -|        1|     -|       yes|        -|   -|    24 (~0%)|    78 (~0%)|    -|
+    | + grp_open_port_fu_142             |     -|  -4.13|        2|  12.800|         -|        1|     -|       yes|        -|   -|    10 (~0%)|    65 (~0%)|    -|
+    +------------------------------------+------+-------+---------+--------+----------+---------+------+----------+---------+----+------------+------------+-----+
+

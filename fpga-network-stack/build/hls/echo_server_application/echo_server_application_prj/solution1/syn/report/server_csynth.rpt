@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vitis HLS Report for 'server'
+================================================================
+* Date:           Tue Jul 19 22:46:45 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        echo_server_application_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu3p-ffvc1517-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.40 ns|  1.409 ns|     1.73 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      24|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      45|    -|
+|Register         |        -|     -|    1047|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1047|      69|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1440|  2280|  788160|  394080|  320|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_condition_133                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_94                   |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op18_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op22_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op27_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op29_write_state2    |       and|   0|  0|   2|           1|           1|
+    |tmp_1_i_nbreadreq_fu_46_p3        |       and|   0|  0|   2|           1|           0|
+    |tmp_i_nbreadreq_fu_60_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  24|          12|          11|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_done                           |   9|          2|    1|          2|
+    |esa_dataFifo_blk_n                |   9|          2|    1|          2|
+    |esa_sessionidFifo_blk_n           |   9|          2|    1|          2|
+    |s_axis_rx_data_V_TDATA_blk_n      |   9|          2|    1|          2|
+    |s_axis_rx_metadata_V_TDATA_blk_n  |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  45|         10|    5|         10|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------+------+----+------+-----------+
+    |              Name             |  FF  | LUT| Bits | Const Bits|
+    +-------------------------------+------+----+------+-----------+
+    |ap_CS_fsm                      |     1|   0|     1|          0|
+    |ap_done_reg                    |     1|   0|     1|          0|
+    |ap_enable_reg_pp0_iter1        |     1|   0|     1|          0|
+    |ksvs_fsmState_V                |     1|   0|     1|          0|
+    |ksvs_fsmState_V_load_reg_112   |     1|   0|     1|          0|
+    |s_axis_rx_data_V_read_reg_129  |  1024|   0|  1024|          0|
+    |sessionID_reg_120              |    16|   0|    16|          0|
+    |tmp_1_i_reg_116                |     1|   0|     1|          0|
+    |tmp_i_reg_125                  |     1|   0|     1|          0|
+    +-------------------------------+------+----+------+-----------+
+    |Total                          |  1047|   0|  1047|          0|
+    +-------------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+------+------------+----------------------+--------------+
+|          RTL Ports          | Dir | Bits |  Protocol  |     Source Object    |    C Type    |
++-----------------------------+-----+------+------------+----------------------+--------------+
+|ap_clk                       |   in|     1|  ap_ctrl_hs|                server|  return value|
+|ap_rst                       |   in|     1|  ap_ctrl_hs|                server|  return value|
+|ap_start                     |   in|     1|  ap_ctrl_hs|                server|  return value|
+|ap_done                      |  out|     1|  ap_ctrl_hs|                server|  return value|
+|ap_continue                  |   in|     1|  ap_ctrl_hs|                server|  return value|
+|ap_idle                      |  out|     1|  ap_ctrl_hs|                server|  return value|
+|ap_ready                     |  out|     1|  ap_ctrl_hs|                server|  return value|
+|s_axis_rx_metadata_V_TVALID  |   in|     1|        axis|  s_axis_rx_metadata_V|       pointer|
+|s_axis_rx_metadata_V_TDATA   |   in|    16|        axis|  s_axis_rx_metadata_V|       pointer|
+|s_axis_rx_metadata_V_TREADY  |  out|     1|        axis|  s_axis_rx_metadata_V|       pointer|
+|s_axis_rx_data_V_TVALID      |   in|     1|        axis|      s_axis_rx_data_V|       pointer|
+|s_axis_rx_data_V_TDATA       |   in|  1024|        axis|      s_axis_rx_data_V|       pointer|
+|s_axis_rx_data_V_TREADY      |  out|     1|        axis|      s_axis_rx_data_V|       pointer|
+|esa_sessionidFifo_din        |  out|    16|     ap_fifo|     esa_sessionidFifo|       pointer|
+|esa_sessionidFifo_full_n     |   in|     1|     ap_fifo|     esa_sessionidFifo|       pointer|
+|esa_sessionidFifo_write      |  out|     1|     ap_fifo|     esa_sessionidFifo|       pointer|
+|esa_dataFifo_din             |  out|  1024|     ap_fifo|          esa_dataFifo|       pointer|
+|esa_dataFifo_full_n          |   in|     1|     ap_fifo|          esa_dataFifo|       pointer|
+|esa_dataFifo_write           |  out|     1|     ap_fifo|          esa_dataFifo|       pointer|
++-----------------------------+-----+------+------------+----------------------+--------------+
+

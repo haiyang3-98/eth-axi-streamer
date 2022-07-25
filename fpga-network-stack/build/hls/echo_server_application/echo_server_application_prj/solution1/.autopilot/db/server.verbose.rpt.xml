@@ -1,0 +1,145 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'server'" level="0">
+<item name = "Date">Tue Jul 19 22:46:45 2022
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">echo_server_application_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu3p-ffvc1517-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.40 ns, 1.409 ns, 1.73 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1, 1, 6.400 ns, 6.400 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 24, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 45, -</column>
+<column name="Register">-, -, 1047, -, -</column>
+<specialColumn name="Available">1440, 2280, 788160, 394080, 320</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_condition_133">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_94">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op18_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op22_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op27_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op29_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_1_i_nbreadreq_fu_46_p3">and, 0, 0, 2, 1, 0</column>
+<column name="tmp_i_nbreadreq_fu_60_p3">and, 0, 0, 2, 1, 0</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="esa_dataFifo_blk_n">9, 2, 1, 2</column>
+<column name="esa_sessionidFifo_blk_n">9, 2, 1, 2</column>
+<column name="s_axis_rx_data_V_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="s_axis_rx_metadata_V_TDATA_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ksvs_fsmState_V">1, 0, 1, 0</column>
+<column name="ksvs_fsmState_V_load_reg_112">1, 0, 1, 0</column>
+<column name="s_axis_rx_data_V_read_reg_129">1024, 0, 1024, 0</column>
+<column name="sessionID_reg_120">16, 0, 16, 0</column>
+<column name="tmp_1_i_reg_116">1, 0, 1, 0</column>
+<column name="tmp_i_reg_125">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, server, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, server, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, server, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, server, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, server, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, server, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, server, return value</column>
+<column name="s_axis_rx_metadata_V_TVALID">in, 1, axis, s_axis_rx_metadata_V, pointer</column>
+<column name="s_axis_rx_metadata_V_TDATA">in, 16, axis, s_axis_rx_metadata_V, pointer</column>
+<column name="s_axis_rx_metadata_V_TREADY">out, 1, axis, s_axis_rx_metadata_V, pointer</column>
+<column name="s_axis_rx_data_V_TVALID">in, 1, axis, s_axis_rx_data_V, pointer</column>
+<column name="s_axis_rx_data_V_TDATA">in, 1024, axis, s_axis_rx_data_V, pointer</column>
+<column name="s_axis_rx_data_V_TREADY">out, 1, axis, s_axis_rx_data_V, pointer</column>
+<column name="esa_sessionidFifo_din">out, 16, ap_fifo, esa_sessionidFifo, pointer</column>
+<column name="esa_sessionidFifo_full_n">in, 1, ap_fifo, esa_sessionidFifo, pointer</column>
+<column name="esa_sessionidFifo_write">out, 1, ap_fifo, esa_sessionidFifo, pointer</column>
+<column name="esa_dataFifo_din">out, 1024, ap_fifo, esa_dataFifo, pointer</column>
+<column name="esa_dataFifo_full_n">in, 1, ap_fifo, esa_dataFifo, pointer</column>
+<column name="esa_dataFifo_write">out, 1, ap_fifo, esa_dataFifo, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,149 @@
+
+
+================================================================
+== Vitis HLS Report for 'convert_net_axis_to_axis_512_s'
+================================================================
+* Date:           Tue Jul 19 06:01:27 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        ip_handler_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu3p-ffvc1517-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.20 ns|  1.168 ns|     0.86 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.400 ns|  6.400 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      16|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      27|    -|
+|Register         |        -|     -|     583|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     583|      43|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1440|  2280|  788160|  394080|  320|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state2_io                |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_io                |       and|   0|  0|   2|           1|           1|
+    |tmp_nbreadreq_fu_44_p3            |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  16|           8|           8|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_done                     |   9|          2|    1|          2|
+    |m_axis_roce_TDATA_blk_n     |   9|          2|    1|          2|
+    |m_axis_roce_internal_blk_n  |   9|          2|    1|          2|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  27|          6|    3|          6|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+-----+----+-----+-----------+
+    |           Name           |  FF | LUT| Bits| Const Bits|
+    +--------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                 |    1|   0|    1|          0|
+    |ap_done_reg               |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1   |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2   |    1|   0|    1|          0|
+    |tmp_85_reg_111            |    1|   0|    1|          0|
+    |tmp_i_keep_reg_106        |   64|   0|   64|          0|
+    |tmp_reg_97                |    1|   0|    1|          0|
+    |tmp_reg_97_pp0_iter1_reg  |    1|   0|    1|          0|
+    |trunc_ln83_reg_101        |  512|   0|  512|          0|
+    +--------------------------+-----+----+-----+-----------+
+    |Total                     |  583|   0|  583|          0|
+    +--------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+------+------------+-------------------------------+--------------+
+|           RTL Ports          | Dir | Bits |  Protocol  |         Source Object         |    C Type    |
++------------------------------+-----+------+------------+-------------------------------+--------------+
+|ap_clk                        |   in|     1|  ap_ctrl_hs|  convert_net_axis_to_axis<512>|  return value|
+|ap_rst                        |   in|     1|  ap_ctrl_hs|  convert_net_axis_to_axis<512>|  return value|
+|ap_start                      |   in|     1|  ap_ctrl_hs|  convert_net_axis_to_axis<512>|  return value|
+|ap_done                       |  out|     1|  ap_ctrl_hs|  convert_net_axis_to_axis<512>|  return value|
+|ap_continue                   |   in|     1|  ap_ctrl_hs|  convert_net_axis_to_axis<512>|  return value|
+|ap_idle                       |  out|     1|  ap_ctrl_hs|  convert_net_axis_to_axis<512>|  return value|
+|ap_ready                      |  out|     1|  ap_ctrl_hs|  convert_net_axis_to_axis<512>|  return value|
+|m_axis_roce_internal_dout     |   in|  1024|     ap_fifo|           m_axis_roce_internal|       pointer|
+|m_axis_roce_internal_empty_n  |   in|     1|     ap_fifo|           m_axis_roce_internal|       pointer|
+|m_axis_roce_internal_read     |  out|     1|     ap_fifo|           m_axis_roce_internal|       pointer|
+|m_axis_roce_TREADY            |   in|     1|        axis|                output_V_last_V|       pointer|
+|m_axis_roce_TVALID            |  out|     1|        axis|                output_V_last_V|       pointer|
+|m_axis_roce_TLAST             |  out|     1|        axis|                output_V_last_V|       pointer|
+|m_axis_roce_TDATA             |  out|   512|        axis|                output_V_data_V|       pointer|
+|m_axis_roce_TKEEP             |  out|    64|        axis|                output_V_keep_V|       pointer|
+|m_axis_roce_TSTRB             |  out|    64|        axis|                output_V_strb_V|       pointer|
++------------------------------+-----+------+------------+-------------------------------+--------------+
+
