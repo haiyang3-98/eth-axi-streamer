@@ -573,7 +573,7 @@ cmac_usplus_0 cmac_axis_inst (
 
 
 `ifdef DEBUG
-/*
+
 ila_512 ila_512_tx (
 	.clk(gt_txusrclk2), // input wire clk
 
@@ -603,7 +603,7 @@ ila_512 ila_512_rx (
 	.probe7( 0), // input wire [0:0]  probe7  
 	.probe8( 0) // input wire [0:0]  probe8
 );
-*/
+
 
 logic[31:0] rx_good_packets_count;
 logic[31:0] rx_total_packets_count;

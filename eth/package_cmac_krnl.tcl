@@ -58,7 +58,7 @@ add_files -norecurse [glob $path_to_hdl/*.v $path_to_hdl/*.sv $path_to_hdl/*.svh
 
 remove_files  ./cmac_usplus_axis_wrapper_1.sv
 
-set_property top cmac_krnl [current_fileset]
+set_property top cmac_krnl_0 [current_fileset]
 update_compile_order -fileset sources_1
 
 set_property  ip_repo_paths  ../fpga-network-stack/iprepo [current_project]
@@ -80,7 +80,7 @@ set_property -dict [list \
     CONFIG.NUM_LANES {4x25} \
     CONFIG.GT_REF_CLK_FREQ {161.1328125} \
     CONFIG.USER_INTERFACE {AXIS} \
-    CONFIG.GT_DRP_CLK {125} \
+    CONFIG.GT_DRP_CLK {100} \
     CONFIG.TX_FLOW_CONTROL {1} \
     CONFIG.RX_FLOW_CONTROL {1} \
     CONFIG.INCLUDE_RS_FEC {1} \
@@ -107,6 +107,10 @@ update_compile_order -fileset sources_1
 #create_ip -name ila -vendor xilinx.com -library ip -module_name ila_0
 #set_property -dict [list CONFIG.C_NUM_OF_PROBES {1} CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_INPUT_PIPE_STAGES {1}] [get_ips ila_0]
 #update_compile_order -fileset sources_1
+
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_512
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {9} CONFIG.Component_Name {ila_512} CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} CONFIG.C_SLOT_0_AXIS_TDATA_WIDTH {512} CONFIG.C_ENABLE_ILA_AXI_MON {true} CONFIG.C_MONITOR_TYPE {AXI}] [get_ips ila_512]
+update_compile_order -fileset sources_1
 
 
 
@@ -173,7 +177,7 @@ add_files -norecurse [glob $path_to_hdl/*.v $path_to_hdl/*.sv $path_to_hdl/*.svh
 
 remove_files  ./cmac_usplus_axis_wrapper.sv
 
-set_property top cmac_krnl [current_fileset]
+set_property top cmac_krnl_1 [current_fileset]
 update_compile_order -fileset sources_1
 
 set_property  ip_repo_paths  ../fpga-network-stack/iprepo [current_project]
@@ -194,7 +198,7 @@ set_property -dict [list \
     CONFIG.NUM_LANES {4x25} \
     CONFIG.GT_REF_CLK_FREQ {161.1328125} \
     CONFIG.USER_INTERFACE {AXIS} \
-    CONFIG.GT_DRP_CLK {125} \
+    CONFIG.GT_DRP_CLK {100} \
     CONFIG.TX_FLOW_CONTROL {1} \
     CONFIG.RX_FLOW_CONTROL {1} \
     CONFIG.INCLUDE_RS_FEC {1} \
@@ -221,6 +225,10 @@ update_compile_order -fileset sources_1
 #create_ip -name ila -vendor xilinx.com -library ip -module_name ila_0
 #set_property -dict [list CONFIG.C_NUM_OF_PROBES {1} CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_INPUT_PIPE_STAGES {1}] [get_ips ila_0]
 #update_compile_order -fileset sources_1
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_512
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {9} CONFIG.Component_Name {ila_512} CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} CONFIG.C_SLOT_0_AXIS_TDATA_WIDTH {512} CONFIG.C_ENABLE_ILA_AXI_MON {true} CONFIG.C_MONITOR_TYPE {AXI}] [get_ips ila_512]
+update_compile_order -fileset sources_1
+
 
 
 
