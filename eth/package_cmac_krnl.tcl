@@ -72,7 +72,6 @@ set_property -dict [list CONFIG.TDATA_NUM_BYTES {64} CONFIG.FIFO_MODE {2} CONFIG
 
 create_ip -name ethernet_frame_padding_512 -vendor ethz.systems.fpga -library hls -version 0.1 -module_name ethernet_frame_padding_512_ip 
 
-
 create_ip -name cmac_usplus -vendor xilinx.com -library ip -module_name cmac_usplus_0
 
 set_property -dict [list \
@@ -112,6 +111,9 @@ create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila
 set_property -dict [list CONFIG.C_NUM_OF_PROBES {9} CONFIG.Component_Name {ila_512} CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} CONFIG.C_SLOT_0_AXIS_TDATA_WIDTH {512} CONFIG.C_ENABLE_ILA_AXI_MON {true} CONFIG.C_MONITOR_TYPE {AXI}] [get_ips ila_512]
 update_compile_order -fileset sources_1
 
+
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_eth
+set_property -dict [list CONFIG.C_PROBE3_WIDTH {15} CONFIG.C_PROBE2_WIDTH {47} CONFIG.C_PROBE1_WIDTH {47} CONFIG.C_NUM_OF_PROBES {4} CONFIG.Component_Name {ila_eth}] [get_ips ila_eth]
 
 
 update_compile_order -fileset sources_1
@@ -229,6 +231,8 @@ create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila
 set_property -dict [list CONFIG.C_NUM_OF_PROBES {9} CONFIG.Component_Name {ila_512} CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} CONFIG.C_SLOT_0_AXIS_TDATA_WIDTH {512} CONFIG.C_ENABLE_ILA_AXI_MON {true} CONFIG.C_MONITOR_TYPE {AXI}] [get_ips ila_512]
 update_compile_order -fileset sources_1
 
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_eth
+set_property -dict [list CONFIG.C_PROBE3_WIDTH {15} CONFIG.C_PROBE2_WIDTH {47} CONFIG.C_PROBE1_WIDTH {47} CONFIG.C_NUM_OF_PROBES {4} CONFIG.Component_Name {ila_eth}] [get_ips ila_eth]
 
 
 

@@ -208,6 +208,15 @@ axis_adapter #
     .m_axis_tuser()
 );
 
+ila_eth inst_ila_eth (
+    .clk(ap_clk),
+    //rx
+    .probe0(m_eth_hdr_valid), //4
+    .probe1(m_eth_dest_mac),
+    .probe2(m_eth_src_mac), // input wire [0:0]  probe0
+    .probe3(m_ethertype) // input wire [0:0]  probe1
+)
+
 endmodule
 
 
