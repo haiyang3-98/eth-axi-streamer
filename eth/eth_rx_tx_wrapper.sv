@@ -214,7 +214,8 @@ ila_eth inst_ila_eth (
     .probe0(m_eth_hdr_valid), //4
     .probe1(m_eth_dest_mac),
     .probe2(m_eth_src_mac), // input wire [0:0]  probe0
-    .probe3(m_ethertype) // input wire [0:0]  probe1
+    .probe3(m_ethertype), // input wire [0:0]  probe1
+    .probe4(axis_net_rx_data_aclk_tvalid && rx_mac_match)
 )
 
 endmodule

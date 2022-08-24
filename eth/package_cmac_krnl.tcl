@@ -113,7 +113,7 @@ update_compile_order -fileset sources_1
 
 
 create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_eth
-set_property -dict [list CONFIG.C_PROBE3_WIDTH {15} CONFIG.C_PROBE2_WIDTH {47} CONFIG.C_PROBE1_WIDTH {47} CONFIG.C_NUM_OF_PROBES {4} CONFIG.Component_Name {ila_eth}] [get_ips ila_eth]
+set_property -dict [list CONFIG.C_PROBE4_WIDTH {1} CONFIG.C_PROBE3_WIDTH {15} CONFIG.C_PROBE2_WIDTH {47} CONFIG.C_PROBE1_WIDTH {47} CONFIG.C_NUM_OF_PROBES {5} CONFIG.Component_Name {ila_eth}] [get_ips ila_eth]
 
 
 update_compile_order -fileset sources_1
@@ -232,8 +232,7 @@ set_property -dict [list CONFIG.C_NUM_OF_PROBES {9} CONFIG.Component_Name {ila_5
 update_compile_order -fileset sources_1
 
 create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_eth
-set_property -dict [list CONFIG.C_PROBE3_WIDTH {15} CONFIG.C_PROBE2_WIDTH {47} CONFIG.C_PROBE1_WIDTH {47} CONFIG.C_NUM_OF_PROBES {4} CONFIG.Component_Name {ila_eth}] [get_ips ila_eth]
-
+set_property -dict [list CONFIG.C_PROBE4_WIDTH {1} CONFIG.C_PROBE3_WIDTH {15} CONFIG.C_PROBE2_WIDTH {47} CONFIG.C_PROBE1_WIDTH {47} CONFIG.C_NUM_OF_PROBES {5} CONFIG.Component_Name {ila_eth}] [get_ips ila_eth]
 
 
 update_compile_order -fileset sources_1
