@@ -5,8 +5,8 @@
 `timescale 1 ns / 1 ps
 // Top level of the kernel. Do not modify module name, parameters or ports.
 module cmac_krnl #(
-  parameter integer C_AXIS_NET_RX_TDATA_WIDTH  = 512,
-  parameter integer C_AXIS_NET_TX_TDATA_WIDTH  = 512
+  parameter integer C_AXIS_NET_RX_TDATA_WIDTH  = 256,
+  parameter integer C_AXIS_NET_TX_TDATA_WIDTH  = 256
 )
 (
   // System Signals
