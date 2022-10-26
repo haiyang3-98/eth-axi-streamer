@@ -27,9 +27,9 @@
 `timescale 1ns/1ps
 `default_nettype none
 
-`define DEBUG
-`define XILINX_2019
-//`define XILINX_2020
+//`define DEBUG
+//`define XILINX_2019
+`define XILINX_2020
 
 module cmac_axis_wrapper
 (
