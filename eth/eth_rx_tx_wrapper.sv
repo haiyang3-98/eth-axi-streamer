@@ -96,7 +96,7 @@ eth_axis_rx #
 ) eth_axis_rx_inst
 (
     .clk(ap_clk),
-    .rst(areset),
+    .rst(ap_rst),
 
     .s_axis_tdata(s_axis_eth_net_rx_tdata),
     .s_axis_tkeep(s_axis_eth_net_rx_tkeep),
@@ -132,7 +132,7 @@ axis_adapter #
 ) axis_adapter_rx
 (
     .clk(ap_clk),
-    .rst(areset),
+    .rst(ap_rst),
 
     .s_axis_tdata(axis_net_rx_data_aclk_tdata),
     .s_axis_tkeep(axis_net_rx_data_aclk_tkeep),
@@ -157,7 +157,7 @@ eth_axis_tx #
 ) eth_axis_tx_inst
 (
     .clk(ap_clk),
-    .rst(areset),
+    .rst(ap_rst),
  
     .s_eth_hdr_valid(tx_hdr_valid),
     .s_eth_hdr_ready(s_eth_hdr_ready),
@@ -190,7 +190,7 @@ axis_adapter #
 ) axis_adapter_tx
 (
     .clk(ap_clk),
-    .rst(areset),
+    .rst(ap_rst),
 
     .s_axis_tdata(s_axis_net_tx_tdata),
     .s_axis_tkeep(s_axis_net_tx_tkeep),
